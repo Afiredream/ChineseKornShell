@@ -2306,7 +2306,7 @@ do_install() # dir [ command ... ]
 		fi
 		# install executable
 		if	test -f "dyn/bin/$f"
-		then	trace cp "dyn/bin/$f" "$DESTDIR$bindir/" || exit
+		then	trace cp "dyn/bin/$f" "$DESTDIR$bindir/tcc.bin" || exit
 			case $HOSTTYPE in
 			darwin.*)
 				trace install_name_tool -delete_rpath "$INSTALLROOT/dyn/lib" "$DESTDIR$bindir/$f" # ignore error
